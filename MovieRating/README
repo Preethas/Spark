@@ -1,0 +1,16 @@
+With movielense dataset of 100k
+ 
+http://grouplens.org/datasets/movielens/
+
+The u.data has the following data 
+user id | item id | rating | timestamp. 
+ 
+Write a map-reduce code to get the minimum time between two ratings of a movie by a user, maximum time between two rating of movies. 
+ 
+A user can rate a moving only once and there are many users giving rating to a movie at different point in time. We interested in finding:
+1) At user level: For each user, what is minimum & maximum time gap between the ratings given for the movies
+i.e.: (U1, min(t2-t1, t3-t2, t4-t3,t5-t4), max(t2-t1, t3-t2, t4-t3,t5-t4))
+ 
+2) At movie level: For each movie, what is minimum & maximum time gap between the ratings given by the users
+i.e.: (M1, min(t2-t1, t3-t2, t4-t3,t5-t4), max(t2-t1, t3-t2, t4-t3,t5-t4))
+ 
